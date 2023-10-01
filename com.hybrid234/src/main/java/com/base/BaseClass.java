@@ -2,6 +2,7 @@ package com.base;
 
 import java.util.Properties;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -18,11 +19,13 @@ public class BaseClass {
 	public static ExtentReports report =null;
 	public static ExtentSparkReporter spark=null;
 	public static ExtentTest test=null;
+	public static Logger log = Logger.getLogger(BaseClass.class);
 	
 	
 	public void intilization() {
 		String browsername=PropertiesUtils.readproperty("browser");	
-		
+		System.out.println("initializing a browser");
+		log.info("initializing a browser");
 		if(browsername.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "D:/chromedriver.exe");
 			driver = new ChromeDriver();

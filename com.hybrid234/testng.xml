@@ -8,5 +8,5 @@
 		<classes>
 			<class name="com.tests.LoginTest" />
 		</classes>
-	</test> <!-- Test -->
-</suite> <!-- Suite -->
+	</test> 
+</suite>
